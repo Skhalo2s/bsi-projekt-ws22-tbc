@@ -265,11 +265,11 @@ public class EntwicklerAnfrageView extends Div {
             ablehnenn = true;
         }
 
-        Boolean finalAblehnenn = ablehnenn;
+
         dialoglayout.add(new Text(benachrichtigung),
 
                 new Button("Speichern", e -> {
-                    if (textArea.getValue().equals("") /*&& finalAblehnenn*/) {
+                    if (textArea.getValue().equals("") ) {
                         Notify.notifyAfterUpdateWithOkay("Bitte Ablehnungsbegründung angeben");
                     } else {
                         anfrage.setReason(textArea.getValue());
