@@ -179,7 +179,7 @@ public class EntwicklerAnfrageView extends Div {
                     currentEntwickler.setKundenprojekt(null);
                     ablehnen(anfrage);
                     entwicklerService.doCreatEntwickler(currentEntwickler);
-                    //UI.getCurrent().getPage().reload();
+
                 });
                 return ablehnenButton;
             }
@@ -188,7 +188,7 @@ public class EntwicklerAnfrageView extends Div {
             }
             ablehnenButton.addClickListener(event -> {
                         ablehnen(anfrage);
-                        //UI.getCurrent().navigate(Constants.Pages.CREATEENTWICKLERPROFIL);
+
                     }
             );
 
@@ -244,8 +244,7 @@ public class EntwicklerAnfrageView extends Div {
         Boolean ablehnenn = false;
         Dialog dialog = new Dialog();
         // dialog grosse
-        //dialog.setHeight("calc(50vh - (2*var(--lumo-space-m)))");
-        //dialog.setWidth("calc(50vw - (4*var(--lumo-space-m)))");
+
         dialog.setHeight("130px");
         dialog.setWidth("400px");
 
@@ -285,12 +284,7 @@ public class EntwicklerAnfrageView extends Div {
 
 
         );
-        /*if (finalAblehnenn){
-            dialoglayout.add( new Button("Abbrechen", e ->{
-                dialog.close();
-            }));
 
-        }*/
 
 
         dialog.add(
@@ -301,6 +295,9 @@ public class EntwicklerAnfrageView extends Div {
         dialog.setCloseOnOutsideClick(false);
     }
 
+    /**
+     * FormLayout
+     */
     private static class ProjektDetailsFormLayout extends FormLayout {
         private final TextField projektname = new TextField("Projektname");
         private final TextArea projektbeschreibung = new TextArea("Projektbeschreibung");
@@ -309,7 +306,7 @@ public class EntwicklerAnfrageView extends Div {
         @Autowired
         private AnfrageRepository anfrageService;
 
-        //private Button begruendungButton = new Button("Speichern");
+
 
 
         public ProjektDetailsFormLayout() {
@@ -349,14 +346,7 @@ public class EntwicklerAnfrageView extends Div {
             } else {
                 reason.setValue("-");
             }
-            // Begründung bearbeiten
-            /*begruendungButton.addClickListener(event ->{
-                anfrage.setReason(reason.getValue());
-                anfrageService.save(anfrage);
-                Notify.notifyAfterUpdateWithOkay("Begründung gespeichert!");
-            }
 
-            );*/
 
         }
 
