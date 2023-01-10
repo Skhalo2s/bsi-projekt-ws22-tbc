@@ -53,13 +53,13 @@ public class Hilfe extends Div {
         Label question4 = new Label("Question4");
         Label answer4 = new Label("Answer4");
 
-        question1.getElement().addEventListener("dblclick", e -> {
+        question1.getElement().addEventListener("click", e -> {
             answer1.setVisible(!answer1.isVisible());
         });
         question2.getElement().addEventListener("click", e -> {
             answer2.setVisible(!answer2.isVisible());
         });
-        question3.getElement().addEventListener("dblclick", e -> {
+        question3.getElement().addEventListener("click", e -> {
             answer3.setVisible(!answer3.isVisible());
         });
         question4.getElement().addEventListener("click", e -> {
